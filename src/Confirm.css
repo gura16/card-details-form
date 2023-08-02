@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.imagediv {
+  display: flex;
+  justify-content: center;
+}
+
+.image1 {
+  position: relative;
+}
+
+.image2 {
+  position: absolute;
+  top: 10px;
+}
+
+.inputdiv {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardholder {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.inputname {
+  width: 327px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: gray;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: gray;
+}
+
+.cardholderdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardnumber {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.inputnumber {
+  width: 327px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: gray;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: gray;
+}
+
+.cardnumberdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.carddate {
+  font-family: "Space Grotesk";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.mm {
+  width: 72px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: grey;
+  font-family: " Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.yy {
+  width: 72px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: grey;
+  font-family: " Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.cvc {
+  width: 164px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: grey;
+  font-family: " Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.datediv {
+  display: flex;
+  gap: 10px;
+}
+
+.carddatediv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  width: 327px;
+  height: 53px;
+  background-color: #21092f;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
