@@ -14,6 +14,10 @@ header {
   height: 240px;
 }
 
+.backgroundimage {
+  display: none;
+}
+
 .maincard {
   position: relative;
 }
@@ -31,11 +35,90 @@ header {
   border-radius: 6px;
   margin-top: -72px;
   position: absolute;
-  margin-left: -165px;
+  margin-left: -65px;
 }
 
 .cvc {
   position: absolute;
   left: 300px;
-  top: 85px;
+  top: 93px;
+  color: white;
+  font-family: "Space Grotesk";
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 11px;
+  letter-spacing: 1.2857142686843872px;
+  text-align: right;
+}
+
+.imagediv {
+  position: relative;
+  width: 200px;
+}
+
+.frontcardtext {
+  position: absolute;
+  left: -50px;
+  top: -60px;
+}
+
+.cardnumber1 {
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 2.200000047683716px;
+  text-align: left;
+  color: white;
+  margin-top: 20px;
+}
+
+.nameanddate {
+  display: flex;
+  gap: 125px;
+  margin-top: 20px;
+}
+
+.name1 {
+  font-family: "Space Grotesk";
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 11px;
+  letter-spacing: 1.2857142686843872px;
+  text-align: left;
+  color: white;
+}
+
+.date1 {
+  font-family: "Space Grotesk";
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 11px;
+  letter-spacing: 1.2857142686843872px;
+  text-align: right;
+  color: white;
+}
+
+@media (min-width: 1040px) {
+  header {
+    background-image: none;
+    display: inline;
+  }
+  .backgroundimage {
+    display: inline;
+    width: 483px;
+    height: 900px;
+  }
+
+  .maincard {
+    position: absolute;
+    top: 350px;
+    left: 260px;
+  }
+
+  .imagediv {
+    position: absolute;
+    top: 250px;
+    left: 340px;
+  }
 }

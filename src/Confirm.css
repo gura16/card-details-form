@@ -167,3 +167,18 @@ input::placeholder {
   margin-bottom: 50px;
   cursor: pointer;
 }
+
+.button:hover {
+  background-color: #4e176d;
+}
+
+@media (min-width: 1040px) {
+  .backgroundimage {
+    position: relative;
+  }
+  .inputdiv {
+    position: absolute;
+    top: 100px;
+    left: 700px;
+  }
+}

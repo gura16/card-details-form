@@ -1,11 +1,17 @@
 import "./Continue.css";
+import icon from "./image/icon-complete.svg";
 
-function Card2() {
+function Continue() {
   return (
     <div>
-      <p>jjj</p>
+      <div className="continuediv">
+        <img className="icon" src={icon} />
+        <p className="thankyou">THANK YOU!</p>
+        <p className="add">We’ve added your card details</p>
+        <button className="button1">Continue</button>
+      </div>
     </div>
   );
 }
 
-export default Card2;
+export default Continue;
