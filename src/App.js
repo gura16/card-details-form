@@ -1,14 +1,20 @@
 import Confirm from "./Confirm";
-import image1 from "./image/image1.png";
-import image2 from "./image/image2.png";
+import "./App.css";
+import frontcard from "./image/bg-card-front.png";
+import backcard from "./image/bg-card-back.png";
 
 function App() {
   return (
-    <div className="maincard">
-      <div className="imagediv">
-        <img className="image1" src={image1} />
-        <img className="image2" src={image2} />
-      </div>
+    <div>
+      <header>
+        <div className="maincard">
+          <img className="backcard" src={backcard} />
+          <p className="cvc">000</p>
+        </div>
+        <div className="imagediv">
+          <img className="frontcard" src={frontcard} />
+        </div>
+      </header>
       <Confirm />
     </div>
   );
