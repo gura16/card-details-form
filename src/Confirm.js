@@ -17,6 +17,7 @@ function Card() {
           tupe="number"
           className="inputnumber"
         ></input>
+        <p className="errornumber">Wrong format, numbers only</p>
       </div>
       <div className="carddatediv">
         <p className="carddate">EXP. DATE (MM.YY) CVC</p>
@@ -25,6 +26,10 @@ function Card() {
           <input placeholder="YY" className="yy"></input>
           <input placeholder="123" className="cvc1"></input>
         </div>
+      </div>
+      <div className="errordatecvc">
+        <p className="errordate">Can’t be blank</p>
+        <p className="errorcvc">Can’t be blank</p>
       </div>
       <button className="button">Confirm</button>
     </div>
