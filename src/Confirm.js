@@ -1,5 +1,34 @@
 import "./Confirm.css";
+import React, { useState } from "react";
+
 function Card() {
+  const MyForm = () => {
+    const [cvc, setCvc] = useState("");
+    const [cvcVerified, setCvcVerified] = useState(null);
+
+    const handleCvcChange = (e) => {
+      setCvc(e.target.value);
+      setCvcVerified(null);
+    };
+
+    const [date, setDate] = useState("");
+    const [dateVerified, setDateVerified] = useState(null);
+
+    const handleDateChange = (e) => {
+      setDate(e.target.value);
+      setDateVerified(null);
+    };
+
+    const handleConfirmClick = () => {
+      const cvcRegex = /^\d{3}$/;
+      const isCvcValid = cvcRegex.test(cvc);
+      setCvcVerified(isCvcValid);
+
+      const dateRegex = /^\d{2}$/;
+      const isDateValid = dateRegex.test(date);
+      setDateVerified(isDateValid);
+    };
+  };
   return (
     <div className="inputdiv">
       <div className="cardholderdiv">
@@ -22,16 +51,35 @@ function Card() {
       <div className="carddatediv">
         <p className="carddate">EXP. DATE (MM.YY) CVC</p>
         <div className="datediv">
-          <input placeholder="MM" className="mm"></input>
+          <input
+            onChange={handleDateChange}
+            placeholder="MM"
+            className="mm"
+          ></input>
           <input placeholder="YY" className="yy"></input>
-          <input placeholder="123" className="cvc1"></input>
+          <input
+            onChange={handleCvcChange}
+            placeholder="123"
+            className="cvc1"
+          ></input>
         </div>
       </div>
       <div className="errordatecvc">
-        <p className="errordate">Can’t be blank</p>
-        <p className="errorcvc">Can’t be blank</p>
+        {dateVerified === false && (
+          <p className="errordate" style={{ color: "red" }}>
+            Can’t be blank
+          </p>
+        )}
+
+        {cvcVerified === false && (
+          <p className="errorcvc" style={{ color: "red" }}>
+            Can’t be blank
+          </p>
+        )}
       </div>
-      <button className="button">Confirm</button>
+      <button onClick={handleConfirmClick} className="button">
+        Confirm
+      </button>
     </div>
   );
 }
