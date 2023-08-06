@@ -2,6 +2,14 @@ import "./Confirm.css";
 import React, { useState } from "react";
 
 function Card() {
+  const [name, setName] = useState("");
+  const [nameVerified, setNameverified] = useState(null);
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    setNameverified(null);
+  };
+
   const [number, setNumber] = useState("");
   const [numberVerified, setNumberverified] = useState(null);
 
@@ -20,6 +28,7 @@ function Card() {
 
   const [year, setYear] = useState("");
   const [yearVerified, setYearverified] = useState(null);
+
   const handleYearChange = (e) => {
     setYear(e.target.value);
     setYearverified(null);
@@ -42,6 +51,10 @@ function Card() {
       setCvcVerified(isCvcValid);
     }
 
+    const nameRegex = /^[A-Za-z\s'-]+$/;
+    const isNmaevalid = nameRegex.test(name);
+    setNameverified(isNmaevalid);
+
     const numberRegex = /^[0-9]{20}$/;
     const isNumbervalid = numberRegex.test(number);
     setNumberverified(isNumbervalid);
@@ -53,6 +66,13 @@ function Card() {
     const dateRegex = /^(0?[1-9]|1[0-2])$/;
     const isDateValid = dateRegex.test(date);
     setDateVerified(isDateValid);
+  };
+
+  const nameinputstyle = {
+    outline:
+      nameVerified === false || nameVerified === ""
+        ? "2px solid #FF5050"
+        : "none",
   };
 
   const numberinputstyle = {
@@ -87,9 +107,11 @@ function Card() {
       <div className="cardholderdiv">
         <p className="cardholder">CARDHOLDER NAME</p>
         <input
+          onChange={handleNameChange}
           placeholder="e.g. Jane Appleseed"
           type="text"
           className="inputname"
+          style={nameinputstyle}
         ></input>
       </div>
       <div className="cardnumberdiv">
@@ -111,6 +133,7 @@ function Card() {
         <p className="carddate">EXP. DATE (MM.YY) CVC</p>
         <div className="datediv">
           <input
+            type="number"
             onChange={handleDateChange}
             placeholder="MM"
             className="mm"
@@ -124,7 +147,7 @@ function Card() {
           ></input>
           <input
             onChange={handleCvcChange}
-            placeholder="123"
+            placeholder="cvc"
             className="cvc1"
             style={cvcinputstyle}
           ></input>
