@@ -12,7 +12,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  position: relative;
 }
 
 .cardholder {
@@ -81,7 +82,8 @@
   letter-spacing: 0px;
   text-align: left;
   color: #ff5050;
-  display: none;
+  position: absolute;
+  top: 160px;
 }
 
 .cardnumberdiv {
@@ -181,11 +183,11 @@ input::placeholder {
 }
 
 .errordatecvc {
-  display: flex;
-  gap: 80px;
+  position: relative;
 }
 
 .errordate {
+  width: 100px;
   font-family: "Space Grotesk";
   font-size: 12px;
   font-weight: 500;
@@ -193,10 +195,13 @@ input::placeholder {
   letter-spacing: 0px;
   text-align: left;
   color: #ff5050;
-  margin-left: -80px;
+  margin-left: -160px;
+  top: -5px;
+  position: absolute;
 }
 
 .errorcvc {
+  width: 100px;
   font-family: "Space Grotesk";
   font-size: 12px;
   font-weight: 500;
@@ -204,6 +209,8 @@ input::placeholder {
   letter-spacing: 0px;
   text-align: left;
   color: #ff5050;
+  top: -5px;
+  position: absolute;
 }
 
 .button:hover {
