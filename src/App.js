@@ -1,4 +1,5 @@
 import Continue from "./Continue";
+import React from "react";
 import "./App.css";
 import frontcard from "./image/bg-card-front.png";
 import backcard from "./image/bg-card-back.png";
