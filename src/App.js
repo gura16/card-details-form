@@ -142,16 +142,16 @@ function App() {
   };
   return (
     <div>
-      <img className="backgroundimage" src={backgrounimage} />
+      <img className="backgroundimage" src={backgrounimage} alt="icon" />
       <header>
         <div className="maincard">
-          <img className="backcard" src={backcard} />
+          <img className="backcard" src={backcard} alt="icon" />
           <p className="cvc">{inputCvc}</p>
         </div>
         <div className="imagediv">
-          <img className="frontcard" src={frontcard} />
+          <img className="frontcard" src={frontcard} alt="icon" />
           <div className="frontcardtext">
-            <img className="cardlogo" src={cardlogo} />
+            <img className="cardlogo" src={cardlogo} alt="icon" />
             <p className="cardnumber1">{inputNumber}</p>
             <div className="nameanddate">
               <p className="name1">{inputName}</p>
