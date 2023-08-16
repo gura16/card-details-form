@@ -1,4 +1,4 @@
-// import "./Continue.css";
+import "./continue.css";
 import icon from "./image/icon-complete.svg";
 
 function Continue() {
